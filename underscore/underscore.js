@@ -2701,6 +2701,7 @@
   // following template settings to use alternative delimiters.
   // ERB => Embedded Ruby
   // Underscore 默认采用 ERB-style 风格模板，也可以根据自己习惯自定义模板
+  // 通过明确的模板语法标识区分了三种不同情况，省得通过正则再来判定属于取数据或执行js语句
   // 1. <%  %> - to execute some code
   // 2. <%= %> - to print some value in template
   // 3. <%- %> - to print some values HTML escaped
