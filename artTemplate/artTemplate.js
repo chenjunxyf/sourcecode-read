@@ -493,9 +493,11 @@
 
             var thisLine = line;
 
+            // 自定义语法
             if (parser) {
 
                 // 语法转换插件钩子
+                // 该语法插件将新语法转换为原生语法
                 code = parser(code, options);
 
             } else if (debug) {
@@ -576,6 +578,8 @@
                     value = "$data." + name;
                 }
 
+                // 预编译：编译赋值过程却是在渲染之前完成
+                // 根据一些简单的规则提取好所有模板变量，声明在渲染函数头部
                 headerCode += name + "=" + value + ",";
                 uniq[name] = true;
 
@@ -590,7 +594,7 @@
 
 
 
-// 定义模板引擎的语法
+// 定义模板引擎的语法(简明语法)
 
 
     defaults.openTag = '{{';
