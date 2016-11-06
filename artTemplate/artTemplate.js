@@ -379,6 +379,8 @@
 
 
         var isNewEngine = ''.trim;  // '__proto__' in {}
+        // 对于IE6-8，数组`push`方法拼接字符串比`+=`快
+        // 现代浏览器使用`+=`会比数组`push`方法快
         var replaces = isNewEngine
             ? ["$out='';", "$out+=", ";", "$out"]
             : ["$out=[];", "$out.push(", ");", "$out.join('')"];

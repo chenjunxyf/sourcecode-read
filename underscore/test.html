@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>underscore debug test</title>
+</head>
+<body>
+
+  <div id="content"></div>
+
+  <script src="./underscore.js"></script>
+
+  <script>
+  var compiled = _.template("hello: <%= name1 %>;hello: <%= name2 %>;heiheihah: <% var x = 1; x++; console.log(x);%>");
+  compiled({name1: 'moe', name2: 'jjlili'});
+  </script>
+</body>
+</html>
