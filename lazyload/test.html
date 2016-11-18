@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test lazyload</title>
+</head>
+<body>
+
+  <script src="./lazyload.js"></script>
+  <script>
+  var js = [
+    'http://cdn.bootcss.com/riot/2.6.7/riot.js',
+    'http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js',
+    'http://cdn.bootcss.com/require.js/2.3.2/require.min.js'
+  ];
+
+  LazyLoad.js(js, function () {
+    console.log('all files have been loaded');
+  });
+  </script>
+</body>
+</html>
