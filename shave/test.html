@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test shave</title>
+
+  <style>
+  p {
+    width: 100px;
+
+    margin: 30px auto;
+    border-bottom: 1px solid green;
+  }
+  </style>
+</head>
+<body>
+  <p class="J_test1">黑黑黑恶化IE黑河诶黑恶化IE黑Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin consequat eros, non posuere justo hendrerit quis. Integer eget risus dapibus, rutrum nisl sit amet, posuere dui. Cras vitae urna ac urna placerat </p>
+
+  <p class="J_test2">黑黑黑黑恶化IE黑河拜拜拜白白白比比吧百变比化IE黑河诶黑恶化IE黑黑黑黑恶化IE黑河诶黑恶化IE黑</p>
+
+  <script src="./shave.js"></script>
+
+  <script>
+  shave('.J_test1', 80);
+
+  shave('.J_test2', 80, {character: '***', spaces: false});
+  </script>
+</body>
+</html>
